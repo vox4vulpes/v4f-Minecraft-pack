@@ -1,0 +1,13 @@
+name = "msiv4f-pack"
+author = "v4f"
+version = "1.0.0"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "d3746212badf0b4e8bbc13633d07d829136ae5efe418ce023d52f3876dae1ea4"
+
+[versions]
+fabric = "0.19.3"
+minecraft = "26.2"
