@@ -73,13 +73,19 @@ java -jar packwiz-installer-bootstrap.jar https://raw.githubusercontent.com/vox4
 - **Официальный лаунчер** — профиль появится сам.
 - **TLauncher** — найдите/добавьте этот профиль так же, как с Fabric выше.
 
-## Шаг 2. Поставить мод Create
+## Шаг 2. Поставить мод Create (автоматически через packwiz)
 
-Скачайте: https://cdn.modrinth.com/data/LNytGWDc/versions/UjX6dr61/create-1.21.1-6.0.10.jar
+Скачайте `packwiz-installer-bootstrap.jar` (см. Шаг 3 в разделе основного сервера выше, если ещё не скачивали).
 
-Положите `create-1.21.1-6.0.10.jar` в папку `mods` (в той же папке игры, что и для основного сервера — см. Шаг 2 в разделе выше про поиск game directory).
+⚠️ Одна и та же папка `mods` не может одновременно содержать и Fabric-моды основного сервера, и Create — они несовместимы друг с другом (разные загрузчики). Используйте **отдельный профиль/instance** с отдельной папкой игры для тестового сервера.
 
-⚠️ Одна и та же папка `mods` не может одновременно содержать и Fabric-моды (Sodium, ModMenu и т.д.), и Create — они несовместимы друг с другом (разные загрузчики). Для игры на тестовом сервере используйте **отдельный профиль/instance** с отдельной папкой `mods`, где лежит только `create-1.21.1-6.0.10.jar`.
+Положите `packwiz-installer-bootstrap.jar` в эту отдельную папку игры (там же, где будет `mods` для NeoForge-профиля) и выполните:
+
+```
+java -jar packwiz-installer-bootstrap.jar https://raw.githubusercontent.com/vox4vulpes/v4f-Minecraft-pack/main/test-server/pack.toml
+```
+
+Create скачается в `mods` автоматически. При обновлении мода — просто повторите эту команду перед запуском.
 
 ## Шаг 3. Запуск
 
