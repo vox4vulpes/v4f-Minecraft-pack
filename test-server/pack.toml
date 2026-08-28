@@ -1,0 +1,13 @@
+name = "v4f-test-create-pack"
+author = "v4f"
+version = "1.0.0"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "a079760226f1bf2fa5fa875d6f4863a1adf8b218461ac8d9fe46affb03b54d0d"
+
+[versions]
+minecraft = "1.21.1"
+neoforge = "21.1.249"
