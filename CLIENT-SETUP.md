@@ -60,7 +60,27 @@ java -jar packwiz-installer-bootstrap.jar https://raw.githubusercontent.com/vox4
 
 Отдельный сервер для тестов, **не связан** с packwiz-модпаком выше. Адрес: `stulbia.qqwrd.com:25566` или `38.180.167.101:25566` (оба ведут на один и тот же сервер).
 
-## Шаг 1. Поставить NeoForge
+## Быстрый способ — автоустановщик (только официальный лаунчер, Windows)
+
+Один скрипт делает всё сразу: ставит NeoForge, создаёт отдельную папку игры, скачивает Create через packwiz и добавляет профиль в лаунчер.
+
+1. Скачайте: https://raw.githubusercontent.com/vox4vulpes/v4f-Minecraft-pack/main/test-server/install-create-test.ps1
+2. Требуется Java 21+ в PATH (проверить: `java -version` в командной строке). Если нет — поставьте с https://adoptium.net/.
+3. Запустите через PowerShell. Windows по умолчанию блокирует скачанные скрипты — так что не просто двойной клик, а:
+   - Откройте PowerShell в папке со скриптом (Shift + правый клик в папке → "Открыть окно PowerShell здесь", либо просто откройте PowerShell и перейдите в папку через `cd`).
+   - Выполните:
+     ```
+     powershell -ExecutionPolicy Bypass -File install-create-test.ps1
+     ```
+4. Дождитесь надписи "Готово!", перезапустите официальный лаунчер, выберите профиль **v4f Create Test**.
+
+Скрипт не трогает существующие сохранения/профили/моды — только добавляет новую версию и новый профиль. Делает резервную копию `launcher_profiles.json` перед правкой (файл с расширением `.bak-...` рядом).
+
+Если что-то пошло не так или используете TLauncher — используйте ручной способ ниже.
+
+## Ручной способ
+
+### Шаг 1. Поставить NeoForge
 
 Скачайте установщик: https://neoforged.net/
 
@@ -75,7 +95,7 @@ java -jar packwiz-installer-bootstrap.jar https://raw.githubusercontent.com/vox4
 
 Если профиля всё равно нет в списке версий — установщик мог поставить файлы не в ту `.minecraft`. Проверьте, есть ли папка `.minecraft\versions\neoforge-21.1.249` (Windows: `%appdata%\.minecraft\versions\`); если нет — переустановите NeoForge, явно указав установщику путь к вашей настоящей `.minecraft` (поле «Installation directory» / «Client install location»). Для TLauncher — то же самое, но путь берётся из настроек самого TLauncher (свой отдельный `.minecraft`, не совпадает с официальным).
 
-## Шаг 2. Отдельная папка игры (обязательно!)
+### Шаг 2. Отдельная папка игры (обязательно!)
 
 ⚠️ Одна и та же папка `mods` не может одновременно содержать и Fabric-моды основного сервера, и Create — они несовместимы друг с другом (разные загрузчики). Профиль `neoforge-21.1.249` должен использовать **отдельную** папку игры, а не общую `.minecraft`.
 
@@ -87,7 +107,7 @@ java -jar packwiz-installer-bootstrap.jar https://raw.githubusercontent.com/vox4
 
 **TLauncher:** в настройках профиля есть аналогичное поле «Директория игры» / «Game directory» — укажите там отдельную папку так же.
 
-## Шаг 3. Поставить мод Create (автоматически через packwiz)
+### Шаг 3. Поставить мод Create (автоматически через packwiz)
 
 Скачайте `packwiz-installer-bootstrap.jar` (см. Шаг 3 в разделе основного сервера выше, если ещё не скачивали).
 
@@ -99,7 +119,7 @@ java -jar packwiz-installer-bootstrap.jar https://raw.githubusercontent.com/vox4
 
 Create скачается в `mods` автоматически. При обновлении мода — просто повторите эту команду перед запуском.
 
-## Шаг 4. Запуск
+### Шаг 4. Запуск
 
 Выберите профиль `neoforge-21.1.249`, подключайтесь к `stulbia.qqwrd.com:25566`.
 
