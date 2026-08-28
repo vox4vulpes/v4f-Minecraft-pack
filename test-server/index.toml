@@ -4,3 +4,8 @@ hash-format = "sha256"
 file = "mods/create.pw.toml"
 hash = "dcaf5f2e28db0b9a127d0167456832341045ddc9aec058c3d9fcf53f618d2404"
 metafile = true
+
+[[files]]
+file = "mods/skinrestorer.pw.toml"
+hash = "4d09486515db5baeaf01c0d6e6a3fefb64a947d42c66b6d5a68f7242cc1a88fc"
+metafile = true
