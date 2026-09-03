@@ -56,6 +56,16 @@ hash = "a1fa121ed5d0207e4cdd3f545d043f68f9a4bb38dcb21278b968fad5e4cefe4a"
 metafile = true
 
 [[files]]
+file = "mods/shared-pets.pw.toml"
+hash = "f62afd78ecb85b39df5f4a440a3576facf342c2d670c24f0d8c35978e36bff56"
+metafile = true
+
+[[files]]
+file = "mods/simple-voice-chat.pw.toml"
+hash = "8eae737eb20a0488e9b57b6a59f0681d142732bcb22fc896ad4e5ff924ec5683"
+metafile = true
+
+[[files]]
 file = "mods/skinrestorer.pw.toml"
 hash = "4d09486515db5baeaf01c0d6e6a3fefb64a947d42c66b6d5a68f7242cc1a88fc"
 metafile = true

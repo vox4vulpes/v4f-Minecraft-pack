@@ -1,0 +1,13 @@
+name = "Shared Pets"
+filename = "shared_pets-neoforge-1.21.1-1.0.0.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/neputdHo/versions/H8I33IsM/shared_pets-neoforge-1.21.1-1.0.0.jar"
+hash-format = "sha512"
+hash = "61e7a41f59c65b4acf22e9f88b07dd4382db31d91b69b76be2afe86ff9a707b6b52cb14d5d9d4e335b0c5328268db2af0f1ac5b3914a240e9873768b03fa1323"
+
+[update]
+[update.modrinth]
+mod-id = "neputdHo"
+version = "H8I33IsM"
